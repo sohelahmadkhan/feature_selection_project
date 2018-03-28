@@ -1,7 +1,9 @@
+# %load q02_best_k_features/build.py
 # Default imports
 
 import pandas as pd
 import numpy as np
+
 data = pd.read_csv('data/house_prices_multivariate.csv')
 
 from sklearn.feature_selection import SelectPercentile
@@ -20,6 +22,9 @@ def percentile_k_features(df,k = 20):
     list_fea = list(columns_with_support)
     list1 = ['OverallQual', 'GrLivArea', 'GarageCars', 'GarageArea', 'TotalBsmtSF', '1stFlrSF', 'FullBath']
     return list1
+   
+   
+
+percentile_k_features(data)
 
 
-#print(percentile_k_features(data))
